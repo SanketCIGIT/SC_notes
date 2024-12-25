@@ -1,0 +1,6 @@
+
+alert tcp any any -> $HOME_NET 21 (msg:"FTP root user dectected"; )
+
+Assignment: 
+Detect ftp login successful 
+Detect if someone logs in from 'root' user
