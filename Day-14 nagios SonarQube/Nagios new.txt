@@ -32,6 +32,21 @@ Architecture:
 3. plugins sends results to Nagios to process
 4. Notifies the admin about the status 
 
+
+
+
+
+
+wget https://assets.nagios.com/downloads/nagiosxi/docs/Installing-Nagios-XI-Manually-on-Linux.pdf
+wget https://assets.nagios.com/downloads/nagiosxi/docs/installation-manual-of-Nagios-XI-2024.pdf
+wget https://assets.nagios.com/downloads/nagios-log-server/docs/Monitoring-A-New-Log-Source-With-Nagios-Log-Server.pdf
+wget https://assets.nagios.com/downloads/nagiosxi/docs/Installing-Nagios-XI-with-VMware-VM-Workstation-Player.pdf
+wget https://assets.nagios.com/downloads/nagiosxi/docs/Installing-Nagios-XI-Configuration-Wizards.pdf
+
+
+
+
+
 NagiosXI core [Manual centos]:
 -----------------------
 1. yum install epel-release
@@ -118,45 +133,3 @@ community_string = Str0ngT0k3n
 OR
 # /etc/init.d/ncpa restart
 -----------------------
-Configure DHCP:
-```````````````
-# apt install isc-dhcp-server -y
-# mv /etc/dhcp/dhcpd.conf.sample /etc/dhcp/dhcpd.conf
-
-# vim /etc/dhcp/dhcpd.conf
-
-
-subnet 192.168.1.0 netmask 255.255.255.0 {
-range 192.168.1.10 192.168.1.50;
-}
-
-:wq
-
-# vim /etc/default/isc-dhcp-server
-INTERFACES="eth0"
-
-:wq
-
-
-# systemctl restart isc-dhcp-server.service
-
-
-# tail -f /var/log/syslog
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-
-
-# git clone https://github.com/tomac/yersinia
-# apt install autoconf libgtk-3-dev libnet1-dev libgtk2.0-dev libpcap-dev -y
-# cd yersinia/
-# ./autogen.sh
-# ./configure --with-gtk
-# make && make install
-
-
-
-wget https://assets.nagios.com/downloads/nagiosxi/docs/Installing-Nagios-XI-Manually-on-Linux.pdf
-wget https://assets.nagios.com/downloads/nagiosxi/docs/installation-manual-of-Nagios-XI-2024.pdf
-wget https://assets.nagios.com/downloads/nagios-log-server/docs/Monitoring-A-New-Log-Source-With-Nagios-Log-Server.pdf
-wget https://assets.nagios.com/downloads/nagiosxi/docs/Installing-Nagios-XI-with-VMware-VM-Workstation-Player.pdf
-wget https://assets.nagios.com/downloads/nagiosxi/docs/Installing-Nagios-XI-Configuration-Wizards.pdf
